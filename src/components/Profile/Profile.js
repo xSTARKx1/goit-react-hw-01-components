@@ -37,9 +37,11 @@ Profile.propTypes = {
   name: Proptypes.string.isRequired,
   tag: Proptypes.string.isRequired,
   location: Proptypes.string.isRequired,
-  // followers: Proptypes.number.isRequired,
-  // views: Proptypes.number.isRequired,
-  // likes: Proptypes.number.isRequired,
+  stats: Proptypes.exact({
+    followers: Proptypes.number.isRequired,
+    views: Proptypes.number.isRequired,
+    likes: Proptypes.number.isRequired,
+  }),
 };
 
 export default Profile;
