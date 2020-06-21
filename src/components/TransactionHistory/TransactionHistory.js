@@ -1,7 +1,7 @@
 import React from 'react';
 import Proptypes, { shape } from 'prop-types';
 import TableHeader from './TableHeader';
-import ListOfTransactions from './ListOfTransactions';
+import ItemOfListTransactions from './ListOfTransactions';
 import styles from './TransactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => (
@@ -12,7 +12,11 @@ const TransactionHistory = ({ items }) => (
     <tbody>
       {items.map(({ id, type, amount, currency }) => (
         <tr key={id}>
-          <ListOfTransactions type={type} amount={amount} currency={currency} />
+          <ItemOfListTransactions
+            type={type}
+            amount={amount}
+            currency={currency}
+          />
         </tr>
       ))}
     </tbody>

@@ -1,7 +1,7 @@
 import React from 'react';
-import Proptypes, { shape } from 'prop-types';
+import Proptypes from 'prop-types';
 
-const ListOfTransactions = ({ type, amount, currency }) => (
+const ItemOfListTransactions = ({ type, amount, currency }) => (
   <>
     <td>{type}</td>
     <td>{amount}</td>
@@ -9,14 +9,10 @@ const ListOfTransactions = ({ type, amount, currency }) => (
   </>
 );
 
-ListOfTransactions.propTypes = {
-  item: Proptypes.arrayOf(
-    shape({
-      type: Proptypes.string.isRequired,
-      amount: Proptypes.string.isRequired,
-      currency: Proptypes.string.isRequired,
-    }).isRequired,
-  ),
+ItemOfListTransactions.propTypes = {
+  type: Proptypes.string.isRequired,
+  amount: Proptypes.string.isRequired,
+  currency: Proptypes.string.isRequired,
 };
 
-export default ListOfTransactions;
+export default ItemOfListTransactions;
